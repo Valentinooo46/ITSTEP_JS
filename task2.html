@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Погода в місті</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      max-width: 600px;
+      margin: auto;
+      background: #f0f4f7;
+      color: #333;
+    }
+    .weather-block {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .weather-block h2 {
+      margin-top: 0;
+    }
+    .forecast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+      gap: 1rem;
+    }
+    .forecast-day {
+      text-align: center;
+    }
+    .forecast-day img {
+      width: 48px;
+      height: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div id="current-weather" class="weather-block">
+    <h2>Поточна погода</h2>
+    <div id="current-content">Завантаження…</div>
+  </div>
+
+  <div id="forecast-weather" class="weather-block">
+    <h2>Прогноз на 5 днів</h2>
+    <div id="forecast-content" class="forecast-grid">Завантаження…</div>
+  </div>
+
+  <script src="./html_temp/JS/script2.js"></script>
+</body>
+</html>
