@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .error-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+    <form id="userInfoForm" enctype="multipart/form-data">
+        <div class="field">
+            <label for="fullname">Full name</label>
+            <input type="text" name="fullname" id="fullname" required data-parsley-minlength="2"
+                data-parsley-maxlength="50" data-parsley-pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ\s\-]+$"
+                data-parsley-errors-container="#error-fullname" />
+            <div id="error-fullname" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label for="avatar">Avatar</label>
+            <input type="file" name="avatar" id="avatar" required data-parsley-errors-container="#error-avatar" />
+            <div id="error-avatar" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label for="birthday">Birthday</label>
+            <input type="text" name="birthday" id="birthday" required placeholder="mm/dd/yyyy"
+                data-parsley-errors-container="#error-birthday" data-parsley-birthday />
+            <div id="error-birthday" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label>Gender</label>
+            <label><input type="radio" name="gender" value="male" required /> Male</label>
+            <label><input type="radio" name="gender" value="female" required /> Female</label>
+            <div id="error-gender" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label><input type="checkbox" name="subscribe" /> Subscribe</label>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+    <div id="result"></div>
+</body>
+<!--JQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--Parsley-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+<script src="./html_temp/JS/script4.js"></script>
+
+</html>

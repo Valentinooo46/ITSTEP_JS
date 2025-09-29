@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .error-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .strength-indicator {
+            font-weight: normal;
+            font-size: 0.9em;
+            color: #666;
+            margin-left: 5px;
+        }
+    </style>
+    <form id="registerForm">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" required data-parsley-minlength="4" data-parsley-maxlength="30"
+                data-parsley-usernamecheck data-parsley-errors-container="#error-username" />
+            <div id="error-username" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required data-parsley-type="email"
+                data-parsley-errors-container="#error-email" />
+            <div id="error-email" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" required data-parsley-minlength="8" data-parsley-maxlength="20"
+                data-parsley-pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                data-parsley-errors-container="#error-password" />
+            <div id="error-password" class="error-container"></div>
+        </div>
+
+        <div class="field">
+            <label>Repeat</label>
+            <input type="password" name="repeat" required data-parsley-equalto="[name='password']"
+                data-parsley-errors-container="#error-repeat" />
+            <div id="error-repeat" class="error-container"></div>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+    <div id="result"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+<script src="./html_temp/JS/script3.js"></script>
+
+</html>

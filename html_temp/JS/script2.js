@@ -1,6 +1,6 @@
 // Заміни 'YOUR_ACCESS_KEY' на свій ключ з weatherstack.com
 const ACCESS_KEY = '***';
-const CITY = 'Holysheve,Lutsk,Ukraine';
+const CITY = 'Kivertsi,Lutsk,Ukraine';
 const FORECAST_DAYS = 5;
 
 // Завантажуємо і поточну погоду, і прогноз (прогноз доступний на платному тарифі)
