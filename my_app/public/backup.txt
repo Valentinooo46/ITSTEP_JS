@@ -1,0 +1,61 @@
+// import logo from './logo.svg';
+// import './App.css';
+// import Hello from './Hello';
+// import { Route, Routes, BrowserRouter} from "react-router-dom";
+
+// const generateRandomName = (count) => {
+//     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//     let result = "";
+//     if(count > 0 && isNaN(count) === false){
+//       for (let i = 0; i < count; i++) {
+//         const randomIndex = Math.floor(Math.random() * characters.length);
+//         result += characters.charAt(randomIndex);
+//       }
+//     }
+//     return result;
+//   }
+//   function getOrCreateKey() {
+//   const existing = sessionStorage.getItem('adminKey');
+//   if (existing) return existing;
+//   const newKey = generateRandomName(10);
+//   sessionStorage.setItem('adminKey', newKey);
+//   return newKey;
+// }
+// function App() {
+  
+
+//   const result = getOrCreateKey();
+//   console.log(result);
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Test />}  />
+//         <Route path="/admin/:id" element={<Hello id__= {result}/>} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// function Test() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+// App.js
