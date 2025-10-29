@@ -44,3 +44,4 @@ export const initialEvents = [
     image: 'https://img.icons8.com/?size=1200&id=pB3lOOBeTps6&format=jpg'
   }
 ];
+		  
