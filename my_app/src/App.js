@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AuthorDescripion  from './components/AuthorDescription';
 import CategoryForm from './components/CategoryForm';
+import DeleteCategory from './components/DeleteCategory';
  
 const App = () => {
   const [query, setQuery] = useState('physics');
@@ -60,7 +61,8 @@ const App = () => {
  
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-      <CategoryForm />
+  <CategoryForm />
+  <DeleteCategory />
       
       <h2>🔬 Semantic Scholar API Explorer</h2>
  
